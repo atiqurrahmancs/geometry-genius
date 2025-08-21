@@ -15,24 +15,24 @@
    </header>
    <main>
        <!-- main content container -->
-      <div class="flex flex-row gap-3 m:gap-3 lg:gap-5 m-3 lg:ml-40 lg:mr-40 lgmt-10">
+      <div class="flex flex-col-reverse md:flex-row lg:flex-row gap-3 m:gap-3 lg:gap-5 m-6 lg:ml-40 lg:mr-40 lg:mt-10">
          <!-- shape card container -->
          <div class="grid lg:grid-cols-3 gap-2 m:gap-3 lg:gap-5">
             <!-- triangle -->
             <div class="card bg-base-100 pt-3 lg:pt-5 shadow-lg rounded-lg border-2 border-gray-300">
               <figure><img class="w-[40%] lg:w-[60%]" src="./images/triangle.png"/></figure>
                <div class="card-body p-3 lg:p-5">
-                  <h2 class="text-center text-lg lg:text-xl font-semibold">Triagnle</h2>
+                  <h2 id="tri-title" class="text-center text-lg lg:text-xl font-semibold">Triagnle</h2>
                   <p class="text-center text-sm lg:text-lg">Area = 0.5 X b X h</p>
                     <div class="flex flex-row gap-2 lg:gap-3 justify-center items-center">
-                     <input class="w-[50%] lg:w-[30%] rounded-md p-1 pl-2" type="text" placeholder="b">
+                     <input id="triangle-b" class="w-[50%] lg:w-[30%] rounded-md p-1 pl-2" type="text" placeholder="b">
                      <span>cm</span>
-                     <input class="w-[50%] lg:w-[30%] rounded-md p-1 pl-2" type="text" placeholder="h">
+                     <input id="triangle-h" class="w-[50%] lg:w-[30%] rounded-md p-1 pl-2" type="text" placeholder="h">
                      <span>cm</span>
                     </div>
                      
                     <div class="card-actions justify-center">
-                      <button class="btn btn-primary mt-2 w-[80%] h-8 lg:h-10 lg:w-[60%]">Calculate</button>
+                      <button id="triangle-calculate" class="btn btn-primary mt-2 w-[80%] h-8 lg:h-10 lg:w-[60%]">Calculate</button>
                     </div>
                   </div>
             </div>
@@ -41,17 +41,17 @@
             <div class="card bg-base-100 pt-3 lg:pt-5 shadow-lg rounded-lg border-2 border-gray-300">
               <figure><img class="w-[60%] lg:w-[80%]" src="./images/rectangle.png"/></figure>
                <div class="card-body p-3 lg:p-5 lg:pt-3">
-                  <h2 class="text-center text-lg lg:text-xl font-semibold">Rectangle</h2>
+                  <h2 id="rec-title" class="text-center text-lg lg:text-xl font-semibold">Rectangle</h2>
                   <p class="text-center text-sm lg:text-lg">Area (A) = W X l</p>
                     <div class="flex flex-row gap-2 lg:gap-3 justify-center items-center">
-                     <input class="w-[50%] lg:w-[30%] rounded-md p-1 pl-2" type="text" placeholder="w">
+                     <input id="rectangle-w" class="w-[50%] lg:w-[30%] rounded-md p-1 pl-2" type="text" placeholder="w">
                      <span>cm</span>
-                     <input class="w-[50%] lg:w-[30%] rounded-md p-1 pl-2" type="text" placeholder="l">
+                     <input id="rectangle-l" class="w-[50%] lg:w-[30%] rounded-md p-1 pl-2" type="text" placeholder="l">
                      <span>cm</span>
                     </div>
                      
                     <div class="card-actions justify-center">
-                      <button class="btn btn-primary mt-2 w-[80%] h-8 lg:h-10 lg:w-[60%]">Calculate</button>
+                      <button id="rectangle-calculate" class="btn btn-primary mt-2 w-[80%] h-8 lg:h-10 lg:w-[60%]">Calculate</button>
                     </div>
                   </div>
             </div>
@@ -117,7 +117,7 @@
             <div class="card bg-base-100 pt-3 lg:pt-7 shadow-lg rounded-lg border-2 border-gray-300">
               <figure><img class="w-[50%] lg:w-[80%]" src="./images/ellipse.png"/></figure>
                <div class="card-body p-3 lg:p-5">
-                  <h2 class="text-center text-lg lg:text-xl font-semibold">Triagnle</h2>
+                  <h2 class="text-center text-lg lg:text-xl font-semibold"> Ellipse</h2>
                   <p class="text-center text-sm lg:text-lg">Area = &#960;ab</p>
                     <div class="flex flex-row gap-2 lg:gap-3 justify-center items-center">
                      <input class="w-[50%] lg:w-[30%] rounded-md p-1 pl-2" type="text" placeholder="a">
@@ -135,12 +135,16 @@
          </div>
 
             <!-- Area Calculation Container -->
-         <div class="h-65 m:h-80 lg:h-100 w-[30%] border-2 border-gray-300 shadow-xl rounded-lg p-2 lg:p-5">
+         <div id="area-container" class="lg:w-[30%] h-65 m:h-80 lg:h-100 border-2 border-gray-300 shadow-xl rounded-lg p-2 lg:p-5 overflow-y-scroll">
             <h3 class="text-lg font-semibold lg:text-2xl">Area Calculation</h3>
 
          </div>
       </div>
+      <ol class="">
+         <li>ok</li>
+         <li>ok</li>
+      </ol>
    </main>
-
+<script src="./functionFile.js"></script>
 </body>
 </html>
